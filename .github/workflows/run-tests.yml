@@ -30,7 +30,7 @@ jobs:
 
       - name: copy .env
         run: |
-          cp .env-sample .env
+          cp .env-example .env
 
       - name: Lint with flake8
         run: flake8 libraryapi/
