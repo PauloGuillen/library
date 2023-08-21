@@ -21,7 +21,6 @@ jobs:
           python-version: '3.10'
       - name: Install dependencies
         run: |
-          cp requirements.txt .
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install -e .
@@ -33,4 +32,4 @@ jobs:
           flake8 pypro
       - name: Test with pytest
         run: |
-          # run: python -m pytest --import-mode=append libraryapi/
+          run: python -m pytest --import-mode=append libraryapi/
