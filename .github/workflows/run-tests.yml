@@ -9,3 +9,5 @@ jobs:
     steps:
       - name: Update
         run: sudo apt update
+        name: Check out repository code
+        yses: actions/checkout@v3
