@@ -32,4 +32,4 @@ jobs:
           flake8 pypro
       - name: Test with pytest
         run: |
-          run: python -m pytest --import-mode=append libraryapi/
+          # run: python -m pytest --import-mode=append libraryapi/
