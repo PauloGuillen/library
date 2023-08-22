@@ -42,11 +42,16 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Lint with flake8
-      run: flake8 libraryapi/
-
     - name: Setup .env
       run: cp .env.example .env
 
     - name: Run Tests
       run: pytest libraryapi/
+
+    - name: flake8 Lint
+      uses: py-actions/flake8@v2
+      with:
+        ignore: "E203"
+        exclude: ".venv, venv, *migrations"
+        max-line-length: "120"
+

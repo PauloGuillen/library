@@ -19,15 +19,15 @@ class AuthorList(generics.ListCreateAPIView):
 
 class AuthorDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Author.objects.all()
+
+
+
+
     serializer_class = AuthorSerializers
-
-
 class BookList(generics.ListCreateAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializers
     filter_backends = [BookFilterBackend]
-
-
 class BookDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializers
