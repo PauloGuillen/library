@@ -14,20 +14,21 @@ class AuthorList(generics.ListCreateAPIView):
         if name := self.request.GET.get('name'):
             queryset = queryset.filter(name__icontains=name)
 
-        return queryset
 
+
+        return queryset
 
 class AuthorDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializers
-
-
 class BookList(generics.ListCreateAPIView):
     queryset = Book.objects.all()
+
+
+
+
     serializer_class = BookSerializers
     filter_backends = [BookFilterBackend]
-
-
 class BookDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializers
