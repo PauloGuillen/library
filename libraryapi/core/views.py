@@ -15,12 +15,8 @@ class AuthorList(generics.ListCreateAPIView):
             queryset = queryset.filter(name__icontains=name)
 
         return queryset
-
-
 class AuthorDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Author.objects.all()
-
-
 
 
 
