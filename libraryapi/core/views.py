@@ -22,6 +22,7 @@ class AuthorDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 
+
     serializer_class = AuthorSerializers
 class BookList(generics.ListCreateAPIView):
     queryset = Book.objects.all()
