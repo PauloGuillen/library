@@ -1,24 +1,16 @@
-name: Library - Fly.io deploy
+name: Lybrary - Fly.io deploy
 
 on:
-  workflow_run:
-    workflows:
-      - Integração contínua
-    types:
-      - completed
+  push:
     branches:
       - master
-
 jobs:
   deploy:
+    name: Deploy app
     runs-on: ubuntu-latest
-    env:
-      FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
     steps:
       - uses: actions/checkout@v3
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - run: flyctl deploy --remote-only
-    environment:
-      name: production
-      url: https://pguillen-library.fly.dev
- 
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
