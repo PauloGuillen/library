@@ -1,3 +1,5 @@
+name: Lybrary - Fly.io deploy
+
 on:
   push:
     branches:
