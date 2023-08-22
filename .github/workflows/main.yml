@@ -51,7 +51,6 @@ jobs:
     - name: flake8 Lint
       uses: py-actions/flake8@v2
       with:
-        ignore: "E203"
-        exclude: ".venv, venv, *migrations"
-        max-line-length: "120"
+          max-line-length: "120"
+          path: "libraryapi"
 
