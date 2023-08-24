@@ -26,30 +26,30 @@ Listar e criar (GET), estão nos respectivos end point:
 api/author
 api/book
 Exemplos:
-https://pguillen-library.fly.dev/api/author/
-https://pguillen-library.fly.dev/api/book/
+- https://pguillen-library.fly.dev/api/author/
+- https://pguillen-library.fly.dev/api/book/
 
 Ler um registro, modificar e eliminar estão nos seguintes end
 point, fornecendo a primary key:
 api/author/<id>
 api/book/<id>
 Exemplos:
-https://pguillen-library.fly.dev/api/author/13906209795772/
-https://pguillen-library.fly.dev/api/book/178948800482864/
+- https://pguillen-library.fly.dev/api/author/13906209795772/
+- https://pguillen-library.fly.dev/api/book/178948800482864/
 
 Os autores podem ser filtrados por name e os livros por name,
 edition e publication_year. 
 Exemplos:
-https://pguillen-library.fly.dev/api/author/?name=ramalho
-https://pguillen-library.fly.dev/api/book/?publication_year=2016
+- https://pguillen-library.fly.dev/api/author/?name=ramalho
+- https://pguillen-library.fly.dev/api/book/?publication_year=2016
 
 Para desenvolver a API, foram utilizadas as seguintes tecnologias:
 Django Rest Framework, Postgres, Docker e Docker Compose.
 
 A documentação da API está disponivel nos seguintes links:
-https://pguillen-library.fly.dev/api/schema/swagger/
-https://pguillen-library.fly.dev/api/schema/redoc/
-https://pguillen-library.fly.dev/api/schema/
+- https://pguillen-library.fly.dev/api/schema/swagger/
+- https://pguillen-library.fly.dev/api/schema/redoc/
+- https://pguillen-library.fly.dev/api/schema/
 
 Caso queira executar a aplicação localmente, clone esse
 repositório, tenha o docker compose instalado e na pasta library
