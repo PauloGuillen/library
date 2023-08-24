@@ -23,42 +23,63 @@ CRUD (Create, Read, Update and Delete), tanto para autores como
 para os livros.
 
 Listar e criar (GET), estão nos respectivos end point:
-api/author
-api/book
+- api/author
+- api/book
+
 Exemplos:
-- https://pguillen-library.fly.dev/api/author/
-- https://pguillen-library.fly.dev/api/book/
+
+https://pguillen-library.fly.dev/api/author/
+
+https://pguillen-library.fly.dev/api/book/
 
 Ler um registro, modificar e eliminar estão nos seguintes end
 point, fornecendo a primary key:
-api/author/<id>
-api/book/<id>
+- api/author/<id>
+- api/book/<id>
+
 Exemplos:
-- https://pguillen-library.fly.dev/api/author/13906209795772/
-- https://pguillen-library.fly.dev/api/book/178948800482864/
+
+https://pguillen-library.fly.dev/api/author/13906209795772/
+
+https://pguillen-library.fly.dev/api/book/178948800482864/
+
 
 Os autores podem ser filtrados por name e os livros por name,
 edition e publication_year. 
 Exemplos:
-- https://pguillen-library.fly.dev/api/author/?name=ramalho
-- https://pguillen-library.fly.dev/api/book/?publication_year=2016
 
-Para desenvolver a API, foram utilizadas as seguintes tecnologias:
-Django Rest Framework, Postgres, Docker e Docker Compose.
+https://pguillen-library.fly.dev/api/author/?name=ramalho
 
+https://pguillen-library.fly.dev/api/book/?publication_year=2016
+
+# Tecnologias
+Para desenvolver a API, foram utilizadas as seguintes ferramentas:
+Django Rest Framework, Postgres, Docker e Docker Compose. Foi realizado o deploy no Fly.io e implementado CI/CD utilizando o Github Actions.
+
+# Documentação
 A documentação da API está disponivel nos seguintes links:
-- https://pguillen-library.fly.dev/api/schema/swagger/
-- https://pguillen-library.fly.dev/api/schema/redoc/
-- https://pguillen-library.fly.dev/api/schema/
 
+https://pguillen-library.fly.dev/api/schema/swagger/
+
+https://pguillen-library.fly.dev/api/schema/redoc/
+
+https://pguillen-library.fly.dev/api/schema/
+
+# Execução local
 Caso queira executar a aplicação localmente, clone esse
 repositório, tenha o docker compose instalado e na pasta library
 do projeto e execute:
+
 mv .env.example .env
+
 docker compose build
+
 docker compose up
 
 Também, acesse os links:
+
 http://localhost:8000/api/author/
+
 http://localhost:8000/api/book/
+
 http://localhost:8000/admin/
